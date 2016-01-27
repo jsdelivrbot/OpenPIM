@@ -17,11 +17,11 @@ $(function() {
     }
   });
 
-  $.get('/nsantos.pem', function(response) {
+  $.get('nsantos.pem', function(response) {
     encPrivArea.text(response);
   });
 
-  $.get('/nsantos.pub', function(response) {
+  $.get('nsantos.pub', function(response) {
     pubArea.text(response);
   });
 
@@ -29,7 +29,7 @@ $(function() {
   //  privArea.text(response);
   // });
 
-  $.getJSON('/notes.json', function(data) {
+  $.getJSON('notes.json', function(data) {
     notes = data;
     notesSelect.empty();
     notesSelect.append($('<option value="">---</option>'));
