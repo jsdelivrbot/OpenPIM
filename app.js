@@ -17,11 +17,11 @@ $(function() {
     }
   });
 
-  $.get('nsantos.pem', function(response) {
+  $.get('C1rcu17/OpenPIM/master/public/nsantos.pem', function(response) {
     encPrivArea.text(response);
   });
 
-  $.get('nsantos.pub', function(response) {
+  $.get('C1rcu17/OpenPIM/master/public/nsantos.pub', function(response) {
     pubArea.text(response);
   });
 
@@ -29,7 +29,7 @@ $(function() {
   //  privArea.text(response);
   // });
 
-  $.getJSON('notes.json', function(data) {
+  $.getJSON('C1rcu17/OpenPIM/master/public/notes.json', function(data) {
     notes = data;
     notesSelect.empty();
     notesSelect.append($('<option value="">---</option>'));
