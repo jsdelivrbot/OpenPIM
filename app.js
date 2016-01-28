@@ -25,7 +25,7 @@ $(function() {
     pubArea.text(response);
   });
 
-  // $.get('/nsantos.priv', function(response) {
+  // $.get('nsantos.priv', function(response) {
   //  privArea.text(response);
   // });
 
