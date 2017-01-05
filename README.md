@@ -3,4 +3,4 @@ Personal Information Management system written in 100% pure javascript for the b
 
 https://rawgit.com/C1rcu17/OpenPIM/master/public/
 
-Password: asdasd
+Password: qwerty
