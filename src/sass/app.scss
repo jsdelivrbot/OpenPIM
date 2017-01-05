@@ -1,0 +1,11 @@
+@import 'foundation';
+
+@include foundation-everything($flex: false);
+
+textarea {
+  resize: none;
+}
+
+.code-font {
+  font-family: $code-font-family;
+}

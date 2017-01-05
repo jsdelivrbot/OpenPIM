@@ -1,79 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Keys</title>
-  <meta name="description" content="My OpenSSL keys">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-  <style>
-    label {
-      font-weight: bold;
-    }
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Personal Information Management system written in 100% pure javascript for the browser, using open standards">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OpenPIM</title>
+  <link rel="stylesheet" href="site.css" />
 
-    textarea {
-      font-family: monospace, monospace;
-      resize: none;
-    }
-
-    .content {
-      margin: 10px;
-    }
-
-    .block {
-      margin-bottom: 20px;
-    }
-
-    .helptext {
-      color: #666666;
-      font-size: 75%;
-    }
-  </style>
-  <script src="site.js"></script>
 </head>
 <body>
 
-  <div class="content">
-
-    <h1>My keys</h1>
-
-    <div class="block">
-      <label for="encprivatekey">Encrypted Private key (PEM)</label><br>
-      <textarea id="encprivatekey" rows="10" cols="65"></textarea><br>
-      <span class="helptext">openssl genpkey -algorithm RSA -out nsantos.pem -aes-256-cbc -pkeyopt rsa_keygen_bits:4096</span>
-    </div>
-
-    <div class="block">
-      <label>Public key (PEM)</label><br>
-      <textarea id="publickey" rows="10" cols="65"></textarea><br>
-      <span class="helptext">openssl rsa -in nsantos.pem -pubout -out nsantos.pub</span>
-    </div>
-
-    <div class="block">
-      <label for="password">Password</label><br>
-      <input id="password" type="password">
-      <button id="decrypt">Decrypt</button>
-    </div>
-
-    <div class="block">
-      <label>Private key (PEM)</label><br>
-      <textarea id="privatekey" rows="10" cols="65"></textarea><br>
-      <span class="helptext">openssl rsa -in nsantos.pem -out nsantos.priv</span>
-    </div>
-
-    <div class="block">
-      <label>Notes</label><br>
-      <select id="notes"></select>
-    </div>
-
-    <div class="block">
-      <label>Text</label><br>
-      <textarea id="text" rows="10" cols="65"></textarea><br>
-      <span class="helptext">echo -n "secret" | openssl pkeyutl -encrypt -pubin -inkey nsantos.pub | openssl base64 -A</span>
-    </div>
-
+  <div class="column row">
+    <h1>OpenPIM</h1>
   </div>
 
+  <div class="column row">
+    <label>
+      <strong>Password</strong>
+      <div class="input-group">
+        <input id="password" class="input-group-field" type="password">
+        <div class="input-group-button">
+          <input id="decrypt" class="button" type="button" value="Decrypt">
+        </div>
+      </div>
+    </label>
+  </div>
+
+  <div class="column row">
+    <ul class="accordion" data-accordion data-allow-all-closed="true">
+
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title">Public key (PEM)</a>
+        <div class="accordion-content" data-tab-content>
+          <label>
+            <strong>Public key (PEM)</strong>
+            <textarea id="publickey" class="code-font" rows="10"></textarea>
+          </label>
+          <p class="help-text">openssl rsa -in nsantos.pem -pubout -out nsantos.pub</p>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title">Encrypted Private key (PEM)</a>
+        <div class="accordion-content" data-tab-content>
+          <label>
+            <strong>Encrypted Private key (PEM)</strong>
+            <textarea id="encprivatekey" class="code-font" rows="10"></textarea>
+          </label>
+          <p class="help-text">openssl genpkey -algorithm RSA -out nsantos.pem -aes-256-cbc -pkeyopt rsa_keygen_bits:4096</p>
+        </div>
+      </li>
+
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title">Private key (PEM)</a>
+        <div class="accordion-content" data-tab-content>
+          <label>
+            <strong>Private key (PEM)</strong>
+            <textarea id="privatekey" class="code-font" rows="10"></textarea>
+          </label>
+          <p class="help-text">openssl rsa -in nsantos.pem -out nsantos.priv</p>
+        </div>
+      </li>
+
+      <li class="accordion-item is-active" data-accordion-item>
+        <a class="accordion-title">Notes</a>
+        <div class="accordion-content" data-tab-content>
+
+          <label>
+            <strong>Notes</strong>
+            <select id="notes"></select>
+          </label>
+
+          <label>
+            <strong>Text</strong>
+            <textarea id="text" class="code-font" rows="10"></textarea>
+          </label>
+          <p class="help-text">echo -n "secret" | openssl pkeyutl -encrypt -pubin -inkey nsantos.pub | openssl base64 -A</p>
+
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <script src="site.js"></script>
 </body>
 </html>

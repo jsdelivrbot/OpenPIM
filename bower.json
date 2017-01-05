@@ -1,17 +1,16 @@
 {
-  "name": "static-server",
-  "description": "A static files server",
-  "main": "server.js",
   "authors": [
-    "Nuno Santos"
+    "Nuno Santos <eu.nuno@gmail.com>"
   ],
-  "license": "MIT",
-  "moduleType": [],
-  "homepage": "",
-  "private": true,
-  "dependencies": {},
+  "description": "Personal Information Management system written in 100% pure javascript for the browser, using open standards",
   "devDependencies": {
-    "zepto": "~1.1.6",
-    "forge": "^0.6.38"
-  }
+    "forge": "^0.6.38",
+    "foundation-sites": "^6.1.2"
+  },
+  "homepage": "https://github.com/C1rcu17/OpenPIM",
+  "license": "MIT",
+  "main": "server/server.js",
+  "moduleType": [],
+  "name": "OpenPIM",
+  "private": true
 }
