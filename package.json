@@ -4,23 +4,23 @@
     "url": "https://github.com/C1rcu17/OpenPIM/issues"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.14.0"
   },
   "description": "Personal Information Management system written in 100% pure javascript for the browser, using open standards",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-minify-css": "^1.2.3",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.7"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8"
   },
   "homepage": "https://github.com/C1rcu17/OpenPIM#readme",
   "license": "MIT",
   "main": "server/server.js",
-  "name": "OpenPIM",
+  "name": "openpim",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/C1rcu17/OpenPIM.git"
@@ -31,5 +31,5 @@
     "start": "node server/server.js",
     "watch": "gulp watch"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

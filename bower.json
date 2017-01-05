@@ -4,13 +4,13 @@
   ],
   "description": "Personal Information Management system written in 100% pure javascript for the browser, using open standards",
   "devDependencies": {
-    "forge": "^0.6.38",
-    "foundation-sites": "^6.1.2"
+    "forge": "^0.6.46",
+    "foundation-sites": "^6.3.0"
   },
   "homepage": "https://github.com/C1rcu17/OpenPIM",
   "license": "MIT",
   "main": "server/server.js",
   "moduleType": [],
-  "name": "OpenPIM",
+  "name": "openpin",
   "private": true
 }

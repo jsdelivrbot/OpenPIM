@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
-var minifycss = require('gulp-minify-css');
+var cleancss = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Enable compressors
@@ -80,7 +80,7 @@ gulp.task('sass', function() {
     cascade: isDevelopment
   }))
   .pipe(concat(sassOutputFile))
-  .pipe(isDevelopment ? gutil.noop() : minifycss())
+  .pipe(isDevelopment ? gutil.noop() : cleancss())
   .pipe(isDevelopment ? gutil.noop() : sourcemaps.write('.'))
   .pipe(gulp.dest('.'));
 });
